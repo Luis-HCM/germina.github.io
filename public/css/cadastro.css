@@ -1,0 +1,81 @@
+
+/* Add padding to containers */
+.container {
+  margin: 5% 15%;
+  padding: 5% 10%;
+  border: thick double rgba(25, 98, 30, 0.8);
+  border-radius: 4%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  padding: 15px;
+  margin: 5px 0 22px;
+  border: none;
+  background: #f7f7f7;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #cacaca;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: 3px solid #8a8a8a;
+  width: 40%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.itens {
+  display: flex;
+}
+.itens label {
+  min-width: 130px;
+} 
+.itens input {
+  margin-left: auto;
+  width: 100%;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+#headerPopup{
+  width:75%;
+  margin:0 auto;
+}
+
+#headerPopup iframe{
+  width:100%;
+  margin:0 auto;
+}
+
+.valid{
+  color:green
+}
+
+.invalid{
+  color:red
+}
+
+.msgErro{
+  font-size: large;
+  color: red;
+}

@@ -1,0 +1,49 @@
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    /* Oculta o que passar aquÃ©m e
+    alÃ©m dos limites */
+    height: fit-content;
+    background-color: rgba(25, 98, 30, 0.8);
+  }
+  .texto{
+    color: #fdfffe;
+    font-size: x-large;
+  }
+  .marquee {
+    white-space: nowrap;
+    /* mantÃ©m a unidade numa Ãºnica linha,
+    ao invÃ©s de passar o conteÃºdo para 
+    baixo ao exceder o limite lateral */
+    animation: marquee 10s linear infinite;
+    /* display: inline-block;
+    trata como se todo o conteÃºdo fosse 
+    uma coisa sÃ³ translate(-100%) 
+    percorreria TODOS os elementos, 
+    repetidos inclusive */
+  }
+  .marquee:hover{
+    animation-play-state: paused;
+  }
+  .marquee a {
+    margin-left: 1%;
+    margin-top:1%
+  }
+
+  @keyframes marquee {
+    /* 0% {
+      Caso se queira comeÃ§ar de outro ponto
+      transform: translate(0%);
+    } */
+    100% {
+      transform: translate(-110%);
+      /* -110% para cobrir o dÃ©cimo elemento por inteiro
+      (os outros 10% Ã© o percentual correspondente a uma elemento
+      numa lista de dez */
+    }
+  }
+
+a:link    { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover   { text-decoration: underline; }
+a:active  { text-decoration: none; }

@@ -1,0 +1,25 @@
+
+<div id="menu_topo">
+  <a href="/"><img src="/imagens/logo/logo-b.png" class="logo" ></a>
+  <a href="/produtos">Produtos</a>
+  <a href="/noticias">Notícias</a>
+  <a href="/sobre">Sobre</a>
+
+
+  <% if(locals.user) {%>
+    <div class="dropdown">
+      <button class="dropbtn" style="text-transform:capitalize ;"><%= locals.user %></button>
+      <div class="dropdown-content">
+        <a href="/userpage/sair"  > Sair </a>
+      </div>
+    </div>
+    
+  <% } else {%>
+    <a id="conta" style="cursor: pointer;">Sua Conta</a>
+    <%- include('login') %> 
+  <% } %>
+  
+
+
+
+</div>

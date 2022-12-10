@@ -1,0 +1,35 @@
+<div class="caixa">
+  <% if(locals.erroLogin) { %>
+    <style>
+      .erro{
+        display: block;
+        color:red;
+      }
+      .modal{
+        display: block;
+       
+      }
+    </style>
+<% } %>
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="bg-img">
+        <p id="msgErro" class="erro"> Usuário e/ou senha incorretos</p>
+        <div class="form_login">
+          <form action="/login" method="post">
+              <b>E-mail</b><input class="input_login" type="text" name="emailLogin" required>
+              <b>Senha</b><input class="input_login" type="password" name="pswLogin" required>
+              <button class="button_login" type="submit">Entrar</button>
+          </form>
+          <a class="a_login" style="padding: 0px;" href="/cadastro">
+            <button class="button_login" style="margin-top: 0px;">
+              Criar Conta
+            </button>
+          </a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

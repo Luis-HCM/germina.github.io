@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/login.css" rel="stylesheet">
+  <script src="/js/login.js" defer></script>
+  <link href="/css/index.css" rel="stylesheet">
+  <link href="/css/cadastro.css" rel="stylesheet">
+  <script src="/js/validaInput.js" defer></script>
+  <link href="/css/fundo.css" rel="stylesheet" >
+  <link href="/css/menu_topo.css" rel="stylesheet" >
+  <title>GERMINA | Cadastro</title>
+</head>
+<body>
+  <%- include('./partials/menu_topo') %>  
+  <%- include('./partials/login') %> 
+
+  <div class="corpo">
+
+    <form action="/cadastro" method="post">
+      <div class="container">
+        <h1>Cadastro</h1>
+        <p>Por favor, complete o formulário para criar sua conta.</p>
+        <hr>
+        <% if (locals.msgErro) { %>
+
+          <p class="msgErro"> O email informado já está cadastrado</p>
+         
+         <% } %>
+
+        <div class="itens">
+          <label for="nome"><b>Nome</b></label>
+          <input type="text" placeholder="Nome" name="nome" id="nome" required><br>
+        </div>
+        <div class="itens">
+          <label for="sobrenome"><b>Sobrenome</b></label>
+          <input type="text" placeholder="Sobrenome" name="sobrenome" id="sobrenome" required><br>
+        </div>
+
+        <div class="itens">
+          <label for="email"><b>E-mail</b></label>
+          <input type="text" placeholder="E-mail" name="email" id="email" required><br>
+        </div>
+
+        <div class="itens">
+          <label for="psw"><b>Senha</b></label>
+          <input type="password" placeholder="Senha" name="psw" id="psw" required><br>
+        </div>
+
+        <div class="itens">
+          <div id="message" style="display:none">
+            <h3>Senha deve conter:</h3>
+            <p id="letter" class="invalid"><b>Letra Minúscula</b></p>
+            <p id="capital" class="invalid"><b>Letra Maiúscula (uppercase)</b></p>
+            <p id="number" class="invalid"><b>Número</b></p>
+            <p id="length" class="invalid">Pelo menos <b>8 caractéres</b></p>
+          </div>
+        </div>
+            
+        <div class="itens">
+          <label for="psw-repeat"><b>Repetir a Senha</b></label>
+          <input type="password" placeholder="Repetir a Senha" name="psw-repeat" id="psw-repeat" required>
+        </div>
+
+          <hr>
+          <p>Ao criar sua conta você aceita os termos de uso <a href="Imagens/AHAHA.mp4" >Termos & Privacidade</a>.</p>
+          <button type="submit" class="registerbtn disabled" disabled>Criar</button>
+      </div>
+      
+    </form>
+
+  </div>
+
+
+  <%- include('./partials/fundo') %> 
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(240,240,240);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.corpo_interno {
+  margin: 0% 10%;
+  background-color: azure;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 5%;
+}
+
+.corpo_esquerdo{
+  width: 70%;
+  max-height: 100%;
+  margin-left: 1%;
+}
+
+.corpo_direito{
+  width: 20%;
+  max-height: 100%;
+  margin-right: 1%;
+  margin-left: 5%;
+
+  display: flex;
+  flex-flow: row wrap;
+}

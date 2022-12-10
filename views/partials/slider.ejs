@@ -1,0 +1,9 @@
+<div class="wrapper" style="margin-top:1% ;">
+    <div class="marquee" >
+        <% for (let i = 0; i < 3; i++) { %>
+            <% for (let produto of produtos) { %>
+                <a class="texto" href="/produtos"> <%= produto.nome %>: <%= produto.precos[0].variacaoDiaria %>%</a>
+            <% } %>
+        <% } %>
+    </div>
+</div>

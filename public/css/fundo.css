@@ -1,0 +1,13 @@
+.menu_fundo {
+    background-color: rgb(25, 98, 30);
+    overflow:  hidden;
+    align-items: center;
+}
+
+.menu_fundo p {
+    color: #f2f2f2;
+    border-left: 30%;
+    padding: 1px 50px;
+    text-decoration:none;
+    font-size: 15px;
+}
